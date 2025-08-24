@@ -1,6 +1,6 @@
 #mainpage
 {
-    background-image: url(../file_00000000873861f786aba4e5a03f7803.png);
+    background-image: url(file_00000000873861f786aba4e5a03f7803.png);
     background-size: cover;
     min-height: 100vh;
 }
@@ -110,7 +110,7 @@ font-size: 2rem;
     inset: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url(../file_00000000873861f786aba4e5a03f7803.png);
+    background-image: url(file_00000000873861f786aba4e5a03f7803.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -280,6 +280,7 @@ font-size: 2rem;
         font-size: 1rem;
     }
 }
+
 
 
 
