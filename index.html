@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遺伝子シミュレーション</title>
+    <link rel="stylesheet" 
+    href="gene.css">
+</head>
+<body>
+    <div id="mainpage" class="page">
+        <div class="container">
+        <form id="geneticsForm">
+    <header>
+    <h1>遺伝子シミュレーションサイト,遺伝子の庭</h1>
+    </header>
+    <main>
+        <section>
+            <p>遺伝子シミュレーションテスト。
+                このテストでは主に遺伝子の優劣勢から子供の特徴を
+                予想する簡易的なシミュレーションができます
+            </p>
+        </section>
+        <section>
+            <h2>シミュレーション開始</h2>
+            <h3>外見</h3>
+        
+               <div class="parent-info-wrapper">
+        <div class="parent-block father" data-title="父">
+                <h4>父の遺伝子情報を入力</h4>
+    
+                <div class="form-group">
+                <label for="hairColorFather">髪の色</label>
+                <select name="hairColorFather" id="hairColorFather">
+                <option value="AA">黒</option>
+                <option value="Aa">茶色</option>
+                <option value="aa">金色</option>
+                </select>
+                </div>
+            </div>
+
+
+
+            <div class="parent-block mother" data-title="母">
+                <h5>母の遺伝子情報を入力</h5>
+    
+                <div class="form-group">
+                <label for="hairColorMother">髪の色</label>
+                <select name="hairColorMother" id="hairColorMother">
+                <option value="AA">黒</option>
+                <option value="Aa">茶色</option>
+                <option value="aa">金色</option>
+                </select>
+                </div>
+            </div>
+               </div>
+
+
+
+    
+               <div class="parent-info-wrapper">
+            <div class="parent-block father" data-title="父">
+                <div class="form-group">
+                <label for="hairTextureFather">髪の質</label>
+                <select name="hairTextureFather" id="hairTextureFather">
+                    <option value="AA">くせ毛</option>
+                    <option value="aa">直毛</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="parent-block mother" data-title="母">
+                <div class="form-group">
+                <label for="hairTextureMother">髪の質</label>
+                <select name="hairTextureMother" id="hairTextureMother">
+                    <option value="AA">くせ毛</option>
+                    <option value="aa">直毛</option>
+                    </select>
+                    </div>
+                </div>
+               </div>
+
+
+
+
+                <div class="parent-info-wrapper">
+                <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                    <label for="foreheadFather">額の広さ</label>
+                    <select name="foreheadFather" id="foreheadFather">
+                        <option value="AA">広い</option>
+                        <option value="aa">狭い</option>
+                        </select>
+                        </div>
+                     </div>
+
+                     <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                    <label for="foreheadMother">額の広さ</label>
+                    <select name="foreheadMother" id="foreheadMother">
+                        <option value="AA">広い</option>
+                        <option value="aa">狭い</option>
+                        </select>
+                        </div>
+                     </div>
+                </div>
+
+    
+
+                     <div class="parent-info-wrapper">
+                     <div class="parent-block father" data-title="父">
+                        <div class="form-group">
+                <label for="eyeColorFather">瞳の色</label>
+                <select name="eyeColorFather" id="eyeColorFather">
+                    <option value="AA">黒</option>
+                    <option value="Aa">茶色</option>
+                    <option value="aa">青</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="parent-block mother" data-title="母">
+                        <div class="form-group">
+                <label for="eyeColorMother">瞳の色</label>
+                <select name="eyeColorMother" id="eyeColorMother">
+                    <option value="AA">黒</option>
+                    <option value="Aa">茶色</option>
+                    <option value="aa">青</option>
+                    </select>
+                    </div>
+                </div>
+                     </div>
+
+
+                
+
+                <div class="parent-info-wrapper">
+                <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                <label for="eyelidFather">まぶた</label>
+                <select name="eyelidFather" id="eyelidFather">
+                    <option value="AA">二重(奥二重含む)</option>
+                    <option value="aa">一重</option>
+                    </select>
+                    </div>
+                 </div>
+
+                 <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                <label for="eyelidMother">まぶた</label>
+                <select name="eyelidMother" id="eyelidMother">
+                    <option value="AA">二重(奥二重含む)</option>
+                    <option value="aa">一重</option>
+                    </select>
+                    </div>
+                </div>
+                </div>
+
+
+
+
+                 <div class="parent-info-wrapper">
+                 <div class="parent-block father" data-title="父">
+                  <div class="form-group">               
+                <label for="faceDepthFather">堀の深さ</label>
+                <select name="faceDepthFather" id="faceDepthFather">
+                    <option value="AA">深い</option>
+                    <option value="aa">浅い</option>
+                    </select>
+                    </div>
+                 </div>
+
+                 <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                <label for="faceDepthMother">堀の深さ</label>
+                <select name="faceDepthMother" id="faceDepthMother">
+                    <option value="AA">深い</option>
+                    <option value="aa">浅い</option>
+                    </select>
+                    </div>
+                 </div>
+                 </div>
+
+                
+
+                 <div class="parent-info-wrapper">
+                 <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                <label for="noseFather">鼻の形</label>
+                <select name="noseFather" id="noseFather">
+                    <option value="AA">わし鼻</option>
+                    <option value="aa">だんご鼻</option>
+                    </select>
+                    </div>
+                 </div>
+
+                 <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                <label for="noseMother">鼻の形</label>
+                <select name="noseMother" id="noseMother">
+                    <option value="AA">わし鼻</option>
+                    <option value="aa">だんご鼻</option>
+                    </select>
+                 </div>
+                </div>
+                 </div>
+
+                          
+
+                 <div class="parent-info-wrapper">
+                 <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                <label for="jawShapeFather">輪郭</label>
+                <select name="jawShapeFather" id="jawShapeFather">
+                    <option value="AA">丸顔</option>
+                    <option value="aa">面長</option>
+                    </select>
+                    </div>
+                 </div>
+
+                 <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                <label for="jawShapeMother">輪郭</label>
+                <select name="jawShapeMother" id="jawShapeMother">
+                    <option value="AA">丸顔</option>
+                    <option value="aa">面長</option>
+                    </select>
+                    </div>
+                </div>
+                 </div>
+
+
+                
+                 <div class="parent-info-wrapper">
+                 <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                <label for="skinColorFather">肌の色</label>
+                <select name="skinColorFather" id="skinColorFather">
+                    <option value="AA">色黒</option>
+                    <option value="aa">色白</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                <label for="skinColorMother">肌の色</label>
+                <select name="skinColorMother" id="skinColorMother">
+                    <option value="AA">色黒</option>
+                    <option value="aa">色白</option>
+                    </select>
+                    </div>
+                </div>
+                 </div>
+
+
+
+                
+                <div class="parent-info-wrapper">
+                <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                <label for="bodyHairFather">体毛の濃さ</label>
+                <select name="bodyHairFather" id="bodyHairFather">
+                    <option value="AA">濃い</option>
+                    <option value="aa">薄い</option>
+                    </select>
+                    </div>
+             </div>
+
+             <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                    <label for="bodyHairMother">体毛の濃さ</label>
+                <select name="bodyHairMother" id="bodyHairMother">
+                    <option value="AA">濃い</option>
+                    <option value="aa">薄い</option>
+                    </select>
+                    </div>
+                </div>
+                </div>
+
+
+
+                
+    
+             <div class="parent-info-wrapper">
+             <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                <label for="statureFather">身長</label>
+                <input type="text" id="statureFather" name="statureFather">
+                </div>
+             </div>
+
+             <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                <label for="statureMother">身長</label>
+                <input type="text" id="statureMother" name="statureMother">
+                </div>
+            </div>
+             </div>
+
+
+    
+             <div class="parent-info-wrapper">
+             <div class="parent-block father" data-title="父">
+                <div class="form-group">
+                <label for="bodyShapeFather">体型</label>
+                <select name="bodyShapeFather" id="bodyShapeFather">
+                    <option value="AA">がっちり</option>
+                    <option value="aa">ほっそり</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="parent-block mother" data-title="母">
+                <div class="form-group">
+                <label for="bodyShapeMother">体型</label>
+                <select name="bodyShapeMother" id="bodyShapeMother">
+                    <option value="AA">がっちり</option>
+                    <option value="aa">ほっそり</option>
+                    </select>
+                    </div>
+                 </div>
+             </div>
+
+
+
+
+
+                <div class="parent-info-wrapper">
+                <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                <label for="bloodFather">血液型</label>
+                <select name="bloodFather" id="bloodFather">
+                    <option value="A">A型</option>
+                    <option value="B">B型</option>
+                    <option value="AB">AB型</option>
+                    <option value="O">O型</option>
+                    </select>
+                    </div>
+                </div>
+
+                 <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                <label for="bloodMother">血液型</label>
+                <select name="bloodMother" id="bloodMother">
+                    <option value="A">A型</option>
+                    <option value="B">B型</option>
+                    <option value="AB">AB型</option>
+                    <option value="O">O型</option>
+                    </select>
+                    </div>
+                 </div>
+               </div>
+
+
+                <button type="button" 
+                onclick="calculateTraits()">シミュレーション開始</button>
+            
+        </section>
+    
+        <p>もっと知りたい人は・・・</p>
+        <section>
+            <h6>特技や内面</h6>
+            
+            <div class="parent-info-wrapper">
+                <div class="parent-block father" data-title="父">
+                
+                <h4>父の遺伝子情報を入力</h4>
+    
+                <div class="form-group">
+                <label for="activeityFather">アクティブ性</label>
+                <select name="activeityFather" id="activeityFather">
+                    <option value="AA">アウトドア派</option>
+                    <option value="aa">インドア派</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="parent-block mother" data-title="母">
+                    <h5>母の遺伝子情報を入力</h5>
+    
+                    <div class="form-group">
+                    <label for="activeityMother">アクティブ性</label>
+                <select name="activeityMother" id="activeityMother">
+                    <option value="AA">アウトドア派</option>
+                    <option value="aa">インドア派</option>
+                    </select>
+                    </div>
+                 </div>
+            </div>
+
+
+
+            <div class="parent-info-wrapper">
+                <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                <label for="challengeFather">チャレンジ性</label>
+                <select name="challengeFather" id="challengeFather">
+                    <option value="AA">行動派</option>
+                    <option value="aa">慎重派</option>
+                    </select>
+                    </div>
+                 </div>
+
+                 <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                <label for="challengeMother">チャレンジ性</label>
+                <select name="challengeMother" id="challengeMother">
+                    <option value="AA">行動派</option>
+                    <option value="aa">慎重派</option>
+                    </select>
+                    </div>
+                 </div>
+            </div>
+
+                
+    
+                 <div class="parent-info-wrapper">
+                 <div class="parent-block father" data-title="父" >
+                    <div class="form-group">
+                <label for="effortFather">努力性</label>
+                <select name="effortFather" id="effortFather">
+                    <option value="AA">我慢強く続きやすい</option>
+                    <option value="aa">飽きっぽく折れやすい</option>
+                    </select>
+                    </div>
+                 </div>
+
+                 <div class="parent-block mother" data-title="母">
+                  <div class="form-group">
+                <label for="effortMother">努力性</label>
+                <select name="effortMother" id="effortMother">
+                    <option value="AA">我慢強く続きやすい</option>
+                    <option value="aa">飽きっぽく折れやすい</option>
+                    </select>
+                    </div>
+                 </div>
+                 </div>
+
+    
+    
+                 <div class="parent-info-wrapper">
+                 <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                <label for="iqFather">学力</label>
+                <select name="iqFather" id="iqFather">
+                    <option value="AA">高め</option>
+                    <option value="aa">低め</option>
+                    </select>
+                    </div>
+                 </div>
+
+                 <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                <label for="iqMother">学力</label>
+                <select name="iqMother" id="iqMother">
+                    <option value="AA">高め</option>
+                    <option value="aa">低め</option>
+                    </select>
+                    </div>
+                  </div>
+                 </div>
+
+                
+    
+                 <div class="parent-info-wrapper">
+                 <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                <label for="athleticFather">運動神経 </label>
+                <select name="athleticFather" id="athleticFather">
+                    <option value="AA">良い</option>
+                    <option value="aa">運動音痴</option>
+                    </select>
+                    </div>
+                 </div>
+
+                 <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                <label for="athleticMother">運動神経 </label>
+                <select name="athleticMother" id="athleticMother">
+                    <option value="AA">良い</option>
+                    <option value="aa">運動音痴</option>
+                    </select>
+                    </div>
+                </div>
+                 </div>
+
+                
+    
+                 <div class="parent-info-wrapper">
+                 <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                <label for="dexterityFather">手の器用さ</label>
+                <select name="dexterityFather" id="dexterityFather">
+                    <option value="AA">器用で繊細</option>
+                    <option value="aa">不器用でガサツ</option>
+                    </select>
+                    </div>
+                 </div>
+
+                 <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                <label for="dexterityMother">手の器用さ</label>
+                <select name="dexterityMother" id="dexterityMother">
+                    <option value="AA">器用で繊細</option>
+                    <option value="aa">不器用でガサツ</option>
+                    </select>
+                    </div>
+                </div>
+                 </div>
+
+                
+    
+                 <div class="parent-info-wrapper">
+                 <div class="parent-block father" data-title="父">
+                    <div class="form-group">
+                <label for="artFather">絵　音楽　創作の才能</label>
+                <select name="artFather" id="artFather">
+                    <option value="AA">多才</option>
+                    <option value="aa">音痴</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="parent-block mother" data-title="母">
+                    <div class="form-group">
+                <label for="artMother">絵　音楽　創作の才能</label>
+                <select name="artMother" id="artMother">
+                    <option value="AA">多才</option>
+                    <option value="aa">音痴</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+
+      
+                <button type="button"
+                onclick="calculateTraits()">シミュレーション開始</button>
+                
+            
+        </form>
+
+        </section>
+       
+        <script>
+            const traitList=[
+                
+                {key:"hairTexture",label:"髪質",dominantLabel:"くせ毛",recessiveLabel:"直毛"},
+                {key:"forehead",label:"額の広さ",dominantLabel:"広い",recessiveLabel:"狭い"},
+                
+                {key:"eyelid",label:"まぶた",dominantLabel:"二重(奥二重含む)",recessiveLabel:"一重"},
+                {key:"faceDepth",label:"彫りの深さ",dominantLabel:"深い",recessiveLabel:"浅い"},
+                {key:"nose",label:"鼻",dominantLabel:"わし鼻",recessiveLabel:"だんご鼻"},
+                {key:"jawShape",label:"輪郭",dominantLabel:"丸顔",recessiveLabel:"面長"},
+                {key:"skinColor",label:"肌の色",dominantLabel:"色黒",recessiveLabel:"色白"},
+                {key:"bodyHair",label:"体毛",dominantLabel:"濃い",recessiveLabel:"薄い"},
+
+                {key:"bodyShape",label:"体型",dominantLabel:"がっちり",recessiveLabel:"ほっそり"},
+
+                {key:"activeity",label:"アクティブ性",dominantLabel:"アウトドア",recessiveLabel:"インドア"},
+                {key:"challenge",label:"チャレンジ性",dominantLabel:"行動派",recessiveLabel:"慎重派"},
+                {key:"effort",label:"努力性",dominantLabel:"我慢強い",recessiveLabel:"飽きっぽい"},
+                {key:"iq",label:"学力",dominantLabel:"高い",recessiveLabel:"低い"},
+                {key:"athletic",label:"運動神経",dominantLabel:"良い",recessiveLabel:"悪い"},
+                {key:"dexterity",label:"手の器用さ",dominantLabel:"器用",recessiveLabel:"不器用"},
+                {key:"art",label:"芸術の才能",dominantLabel:"多才",recessiveLabel:"音痴"},
+            ];
+
+            
+            //親の遺伝子型から子供の遺伝子型を決める汎用関数
+            function getChildGeneType(father,mother){
+                const f =father.split("");
+                const m =mother.split("");
+                const gene1=
+                f[Math.floor(Math.random()* 2)];
+                const gene2=
+                m[Math.floor(Math.random()* 2)];
+                const sorted =[gene1,gene2].sort((a,b)=> {
+                    if(a === b) return 0;
+                    if(a ==="A") return -1;
+                    if(b === "A") return 1;
+                    return a.localeCompare(b);
+                 });
+                return [gene1,gene2].sort().join("");
+                }
+
+
+
+
+                //遺伝子型から表現型(各パーツの要素)を決定する部分
+                function getPhenotype(genotype,
+                    dominantLabel,recessveLabel){
+                        return genotype.includes("A") ?
+                        dominantLabel : recessveLabel;
+                    }
+
+
+                    //身長の予測演算の部分
+                    function calculateHeight(fatherHeight,motherHeight) {
+                        const boy = Math.round(((fatherHeight+motherHeight+13) / 2 )* 10)/ 10;
+                        const girl = Math.round(((fatherHeight+motherHeight-13) / 2 )* 10)/ 10;
+                        return { boy, girl };
+                    }
+
+                    //血液型の予測演算の部分
+                      function calculateBloodType(father,mother) {
+                        const bloodTypeAlleles = {
+                            "A":["AA","AO"],
+                            "B":["BB","BO"],
+                            "O":["OO"],
+                            "AB":["AB"],
+                        };
+
+
+                        const fatherAlleles = bloodTypeAlleles[father];
+                        const motherAlleles = bloodTypeAlleles[mother];
+
+                        const possibleChildGenes = [];
+                        fatherAlleles. forEach(f => {
+                        motherAlleles. forEach(m => {
+                            possibleChildGenes.push(f + m);
+                        });    
+                        });
+
+                        const ChildGene =
+                        possibleChildGenes[Math.floor(Math.random() * 
+                    possibleChildGenes.length)];
+
+                    if (ChildGene.includes("AA") ||
+                ChildGene.includes("AO")) return "A型";
+                if (ChildGene.includes("BB") ||
+                ChildGene.includes("BO")) return "B型";
+                if (ChildGene.includes("OO")) return "O型";
+                if (ChildGene === "AB") return "AB型";
+             }
+                
+
+             //髪色の演算部分
+
+                function calculateHairColor(father,mother){
+                    const fatherAlleles = 
+                    father.split("");
+                    const motherAlleles = 
+                    mother.split("");
+
+                    const gene1 = 
+                    fatherAlleles[Math.floor(Math.random()* 2)];
+                    const gene2 = 
+                    motherAlleles[Math.floor(Math.random() * 2)];
+
+                    const ChildGene = [gene1,gene2].sort().join("");
+
+                    
+                    if (ChildGene === "AA") return {gene: ChildGene,color: "黒"};
+                    if (ChildGene === "Aa") return  {gene: ChildGene, color: "茶"};
+                    if (ChildGene === "aa") return  {gene: ChildGene, color: "金"};
+                     }
+
+
+
+                 //目の色の演算部分
+
+                 function calculateEyeColor(father,mother){
+                    const fatherAlleles = 
+                    father.split("");
+                    const motherAlleles = 
+                    mother.split("");
+
+                    const gene1 = 
+                    fatherAlleles[Math.floor(Math.random()* 2)];
+                    const gene2 = 
+                    motherAlleles[Math.floor(Math.random() * 2)];
+
+                    const ChildGene = [gene1,gene2].sort().join("");
+
+                    
+                    if (ChildGene === "AA") return {gene: ChildGene,color: "黒"};
+                    if (ChildGene === "Aa") return {gene: ChildGene, color: "茶"};
+                    if (ChildGene === "aa") return   {gene: ChildGene, color: "青"};
+                     }
+              
+
+                             
+            
+                        
+                    
+
+                    
+
+
+                    
+
+
+                    //演算結果を表示
+                    function calculateTraits(){
+                        const form= document.getElementById("geneticsForm");
+                        let result="";
+
+
+                        //髪の色の演算
+                      const fatherHairColor =
+                      form["hairColorFather"].value;
+                      const motherHairColor = 
+                      form["hairColorMother"].value;
+                      const hairColor = 
+                      calculateHairColor(fatherHairColor,motherHairColor);
+                      result += `<p>髪の色:${hairColor.gene}(${hairColor.color})</p>`;
+
+
+
+
+
+                      //目の色の演算
+                     const fatherEyeColor =
+                      form["eyeColorFather"].value;
+                      const motherEyeColor = 
+                      form["eyeColorMother"].value;
+                      const eyeColor = 
+                      calculateEyeColor(fatherEyeColor,motherEyeColor);
+                      result += `<p>瞳の色:${eyeColor.gene}(${eyeColor.color}) </p>`;
+                        
+                    
+                        
+            
+
+                        //各パーツ(2択問題)を計算
+                        traitList.forEach(trait => {
+                            const father = form[`${trait.key}Father`].value;
+                            const mother = form[`${trait.key}Mother`].value;
+
+                            const genotype = getChildGeneType(father,mother);
+                            const phenotype = getPhenotype(genotype,trait.dominantLabel,trait.recessiveLabel);
+                            result += `<p>${trait.label}:${genotype} (${phenotype})</p>`;
+                        });
+
+                     //血液型の演算
+                        const fatherBlood = form["bloodFather"].value;
+                        const motherBlood = form["bloodMother"].value;
+                        const bloodType = 
+                        calculateBloodType(fatherBlood,motherBlood);
+                        result += `<p>血液型:${bloodType}</p>`;
+
+
+
+                    
+
+                       //身長の演算
+                        const fatherHeight =
+                         parseInt(form["statureFather"].value);
+                        const motherHeight =
+                         parseInt(form["statureMother"].value);
+                        if (!isNaN(fatherHeight)&& ! 
+                        isNaN(motherHeight)) {
+                            const height  = 
+                            calculateHeight(fatherHeight,motherHeight);
+                            result += `<p>身長：男子 ${height.boy}cm ／ 女子 ${height.girl}cm</p>`;     
+                        }
+                       
+                    
+
+                        localStorage.setItem("geneticResult",result);
+
+                        window.location.href="geneResult.html"; 
+                    }
+                  
+               </script>
+    </main>
+</div>
+</div>
+</body>
+</html>

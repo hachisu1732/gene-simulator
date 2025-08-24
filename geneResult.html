@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遺伝子シミュレーション</title>
+    <link rel="stylesheet"
+    href="gene.css">
+</head>
+
+<body>
+    <div class="back-ground">
+   <div id="resultContent">
+        <h1>あなたのシミュレーション結果</h1>
+        <div id="resultArea" class="result-grid" ></div>
+    
+    <button id="toWordsButton"
+    onclick="location.href='index.html'">お疲れさまでした</button>
+</div>
+</div>
+
+    <script>
+        function showNextWord() {
+            console.log("showNextWord()実行されたよ！");
+        }
+
+
+        window.onload = function () {
+            const result =
+            localStorage.getItem("geneticResult");
+            const container =
+            document.getElementById("resultArea");
+
+            if (result) {
+               container.innerHTML = result;
+            }else{
+                container.textContent="結果が見つかりませんでした。";
+            }
+        
+            showNextWord();
+        };
+            
+                   
+    </script>
+    
+</body>
+</html>

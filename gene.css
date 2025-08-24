@@ -1,0 +1,285 @@
+#mainpage
+{
+    background-image: url(../file_00000000873861f786aba4e5a03f7803.png);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#mainpage .container
+{
+    max-width: 800px;
+    margin: 0 auto;
+
+    padding: 30px;
+    border-radius: 12px;
+}
+
+#mainpage h4,h5
+{text-align: center;
+margin-bottom: 20px;
+font-size: 1rem;
+}
+
+#mainpage h1,h2
+{
+    text-align: center;
+margin-bottom: 20px;
+font-size: 2rem;
+
+}
+
+#mainpage h3,h6
+{
+    background-color: #ffffffd8;
+    padding: 20px;
+    max-width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+margin-bottom: 20px;
+font-size: 2rem;
+}
+
+
+
+
+
+#mainpage .form-group
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+#mainpage .form-group label
+{
+    width: 160px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#mainpage .form-group select,
+#mainpage .form-group input
+{
+    flex: 1;
+    min-width: 160px;
+    padding: 5px;
+}
+
+#mainpage .parent-info-wrapper
+{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+#mainpage .parent-block
+{
+    flex: 1 1 350px;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#mainpage button
+{
+    display: block;
+    margin: 20px auto;
+    padding: 10px 30px;
+    font-size: 16px;
+    background-color: #e64ae1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+
+.back-ground
+{
+    display: flex;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../file_00000000873861f786aba4e5a03f7803.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    
+}
+
+#resultContent 
+{
+    
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    max-width: 800px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#resultContent h1
+{
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+
+
+
+#resultContent .result-grid
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2,240px);
+    gap: 20px 40px;
+    margin: 0 auto;
+}
+
+#resultContent .result-grid p
+{
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    max-width: 250px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#toWordsButton
+{
+    margin-top: 40px;
+    padding: 12px 24px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    background-color: #e64ae1;
+    color: #333;
+    cursor: pointer;
+}
+
+#toWordsButton:hover
+{
+    background-color: #003f6b;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+ #mainpage {
+    
+    background-attachment: fixed;
+    background-position: center top;
+ }
+
+
+
+    #mainpage .parent-info-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 60px;
+        
+    }
+
+    #mainpage h1, #mainPage h2 {
+        font-size: 1.5rem;
+    }
+
+    #mainpage h3, #mainPage h6 {
+        font-size: 1.2rem;
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    
+
+
+  #mainpage .form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 2px 0;
+    padding: 0;
+    
+  }
+
+  #mainpage .form-group label{
+    width: auto;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2px;
+    font-size: 1rem;
+  }
+
+  #mainpage .form-group select,
+  #mainpage .form-group input {
+    margin: 0;
+    padding: 2px;
+  }
+
+    #mainpage .parent-block {
+        width: 100%;
+        flex: none !important;
+        min-width: auto !important;
+        max-width: 95vw !important;
+    padding: 10px !important;
+    margin: 0 auto !important;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-height: auto; 
+    height: auto !important;
+}
+
+#mainpage .parent-block::before{
+    content: attr(data-title);
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+    
+
+
+
+    #resultContent .result-grid{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    #resultContent .result-grid p {
+        min-width: auto;
+        max-width: 90%;
+        font-size: 1rem;
+    }
+
+    #toWordButton {
+        width: 80%;
+        font-size: 1rem;
+    }
+}
+
+
+
